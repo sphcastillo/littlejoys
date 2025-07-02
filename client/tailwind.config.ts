@@ -1,25 +1,32 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
+import forms from '@tailwindcss/forms';
+import animate from 'tailwindcss-animate';
 
 const config: Config = {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: {
+    files: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  },
   theme: {
     extend: {
-      fontFamily: {},
+      fontFamily: {
+        spartan: ['"League Spartan"', 'sans-serif'],
+        playfair: ['"Playfair Display"', 'serif'],
+      },
       fontSize: {
         '5xl': '3rem',
         '6xl': '3.75rem',
         '7xl': '4.5rem',
       },
       animation: {
-        marquee: 'marquee 60s linear infinite',
+        marquee: 'marquee 20s linear infinite',
         marquee2: 'marquee2 60s linear infinite',
         'spin-slow': 'spin-slow 10s linear infinite',
         'spin-reverse': 'spin-reverse 8s linear infinite',
       },
       keyframes: {
         marquee: {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-50%)' },
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
         },
         marquee2: {
           '0%': { transform: 'translateX(0)' },
@@ -44,7 +51,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [require('@tailwindcss/forms'), require('tailwindcss-animate')],
-}
+  plugins: [forms, animate],
+};
 
-export default config
+export default config;

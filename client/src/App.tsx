@@ -1,7 +1,7 @@
 import Banner from "./components/Banner";
 import Hero from "./components/Hero";
 import Nav from "./components/Nav";
-import "./index.css";
+
 
 function App() {
   return (

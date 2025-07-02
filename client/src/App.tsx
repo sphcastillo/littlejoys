@@ -1,6 +1,7 @@
 import Banner from "./components/Banner";
 import Hero from "./components/Hero";
 import Nav from "./components/Nav";
+import ShoppingCarousel from "./components/ShoppingCarousel";
 
 
 function App() {
@@ -20,7 +21,9 @@ function App() {
         <Hero />
       </div>
 
-      <div className='bg-[#faf7f0]'>{/* <ShoppingCarousel /> */}</div>
+      <div className='bg-[#faf7f0]'>
+        <ShoppingCarousel />
+      </div>
     </>
   );
 }

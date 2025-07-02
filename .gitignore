@@ -1,0 +1,13 @@
+# Node (React)
+client/node_modules
+client/.env
+
+# Python (Flask)
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+backend/.env
+*.db
+
+# OS junk
+.DS_Store
